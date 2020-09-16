@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_rooms">Brak pokoi</string>
+    <string name="room_name_cannot_be_empty">Nazwa nie może być pusta</string>
+    <string name="room_name_to_long">Nazwa pokoju zbyt długa!</string>
+
+    <string-array name="room_icon_colors">
+        <item>#aa67e6</item>
+        <item>#307aca</item>
+        <item>#fd4863</item>
+        <item>#9e44e3</item>
+        <item>#4456e3</item>
+        <item>#44c3e3</item>
+        <item>#44e3ad</item>
+        <item>#f4ff75</item>
+        <item>#ffbc75</item>
+        <item>#ff7575</item>
+    </string-array>
+
+    <integer-array name="room_icons">
+        <item>@drawable/ic_bedroom</item>
+        <item>@drawable/ic_livingroom</item>
+        <item>@drawable/ic_office</item>
+        <item>@drawable/ic_laundry_room</item>
+        <item>@drawable/ic_bathroom</item>
+    </integer-array>
+
+    <string-array name="room_icon_names">
+        <item>ic_bedroom</item>
+        <item>ic_livingroom</item>
+        <item>ic_office</item>
+        <item>c_laundry_room</item>
+        <item>ic_bathroom</item>
+    </string-array>
+
+</resources>

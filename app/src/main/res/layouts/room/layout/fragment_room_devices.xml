@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.room.RoomSensorsFragment">
+
+  <!--  <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"> -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profile_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/my_face"
+            app:civ_border_color="@color/secondaryTextColor"
+            app:civ_border_width="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/add_room"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:tint="@color/secondaryTextColor"
+            app:layout_constraintBottom_toBottomOf="@+id/room_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/room_name"
+            app:srcCompat="@drawable/ic_outline_add_circle_outline" />
+
+        <TextView
+            android:id="@+id/room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="@string/room_name_room_devices_fragment"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_button"
+            app:layout_constraintEnd_toStartOf="@+id/add_room"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/profile_button" />
+
+        <ImageView
+            android:id="@+id/room_icon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/profile_button"
+            app:srcCompat="@drawable/ic_home" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <TextView
+            android:id="@+id/active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="@string/active_room_devices_fragment"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintStart_toEndOf="@+id/room_icon"
+            app:layout_constraintTop_toTopOf="@+id/room_icon"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toTopOf="@+id/inactive"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toEndOf="@+id/room_icon"
+            app:layout_constraintTop_toBottomOf="@+id/active" />
+
+        <TextView
+            android:id="@+id/inactive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="@string/inactive_room_devices_fragment"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/divider1"
+            app:layout_constraintStart_toEndOf="@+id/room_icon"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toTopOf="@+id/usage"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toEndOf="@+id/room_icon"
+            app:layout_constraintTop_toBottomOf="@+id/inactive" />
+
+        <TextView
+            android:id="@+id/usage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="@string/power_usage_room_devices_fragment"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/room_icon"
+            app:layout_constraintStart_toEndOf="@+id/room_icon"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/active_devices_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/inactive_devices_count"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/active"
+            app:layout_constraintTop_toTopOf="@+id/active" />
+
+        <TextView
+            android:id="@+id/inactive_devices_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/power_usage_count"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/inactive"
+            app:layout_constraintTop_toBottomOf="@+id/active_devices_count" />
+
+        <TextView
+            android:id="@+id/power_usage_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/usage"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/usage"
+            app:layout_constraintTop_toBottomOf="@+id/inactive_devices_count" />
+
+        <Button
+            android:id="@+id/turn_off_all_devices_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/turn_off_all_devices_room_devices_fragment"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/room_icon" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/room_sensors_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/turn_off_all_devices_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

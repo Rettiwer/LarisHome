@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/authenticationMethodSelectFragment"
+        android:name="com.rettiwer.pl.laris.ui.authentication.AuthenticationMethodSelectFragment"
+        android:label="fragment_authentication_method_select"
+        tools:layout="@layout/fragment_authentication_method_select" >
+        <action
+            android:id="@+id/action_authenticationMethodSelectFragment_to_newFingerprintCreatorFragment"
+            app:destination="@id/newFingerprintCreatorFragment" />
+        <action
+            android:id="@+id/action_authenticationMethodSelectFragment_to_newPinCreatorFragment"
+            app:destination="@id/newPinCreatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fingerprintAuthenticationFragment"
+        android:name="com.rettiwer.pl.laris.ui.authentication.FingerprintAuthenticationFragment"
+        android:label="fragment_fingerprint_authentication"
+        tools:layout="@layout/fragment_fingerprint_authentication" >
+        <action
+            android:id="@+id/action_fingerprintAuthenticationFragment_to_home_activity"
+            app:destination="@id/home_activity" />
+        <action
+            android:id="@+id/action_fingerprintAuthenticationFragment_to_pinAuthenticationFragment2"
+            app:destination="@id/pinAuthenticationFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPinCreatorFragment"
+        android:name="com.rettiwer.pl.laris.ui.authentication.NewPinCreatorFragment"
+        android:label="fragment_new_pin_creator"
+        tools:layout="@layout/fragment_new_pin_creator" />
+    <fragment
+        android:id="@+id/ownerNewUserVerificationFragment2"
+        android:name="com.rettiwer.pl.laris.ui.authentication.OwnerNewUserVerificationFragment"
+        android:label="fragment_owner_new_user_verification"
+        tools:layout="@layout/fragment_owner_new_user_verification" />
+    <fragment
+        android:id="@+id/pinAuthenticationFragment2"
+        android:name="com.rettiwer.pl.laris.ui.authentication.PinAuthenticationFragment"
+        android:label="fragment_pin_authentication"
+        tools:layout="@layout/fragment_pin_authentication" >
+        <action
+            android:id="@+id/action_pinAuthenticationFragment2_to_home_activity"
+            app:destination="@id/home_activity" />
+    </fragment>
+    <activity
+        android:id="@+id/home_activity"
+        android:name="com.rettiwer.pl.laris.ui.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/newFingerprintCreatorFragment"
+        android:name="com.rettiwer.pl.laris.ui.authentication.NewFingerprintCreatorFragment"
+        android:label="fragment_new_fingerprint_creator"
+        tools:layout="@layout/fragment_new_fingerprint_creator"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.rettiwer.pl.laris.ui.authentication.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_authenticationMethodSelectFragment"
+            app:destination="@id/authenticationMethodSelectFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_fingerprintAuthenticationFragment"
+            app:destination="@id/fingerprintAuthenticationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_pinAuthenticationFragment2"
+            app:destination="@id/pinAuthenticationFragment2" />
+        <action
+            android:id="@+id/action_loginFragment_to_ownerNewUserVerificationFragment22"
+            app:destination="@id/ownerNewUserVerificationFragment2" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.rettiwer.pl.laris.ui.authentication.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+</navigation>

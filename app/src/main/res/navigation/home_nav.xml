@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/roomListFragment">
+    <fragment
+        android:id="@+id/roomListFragment"
+        android:name="com.rettiwer.pl.laris.ui.home.RoomListFragment"
+        android:label="fragment_room_list"
+        tools:layout="@layout/fragment_room_list" >
+        <action
+            android:id="@+id/action_roomListFragment_to_roomCreatorFragment"
+            app:destination="@id/newRoomFragment" />
+        <action
+            android:id="@+id/action_roomListFragment_to_roomDevicesFragment"
+            app:destination="@id/roomDevicesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newRoomFragment"
+        android:name="com.rettiwer.pl.laris.ui.home.NewRoomFragment"
+        android:label="fragment_room_creator"
+        tools:layout="@layout/fragment_new_room" >
+        <action
+            android:id="@+id/action_roomCreatorFragment_to_roomListFragment"
+            app:destination="@id/roomListFragment"
+            app:popUpTo="@+id/roomListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomDevicesFragment"
+        android:name="com.rettiwer.pl.laris.ui.room.RoomSensorsFragment"
+        android:label="fragment_room_devices"
+        tools:layout="@layout/fragment_room_devices" >
+        <argument
+            android:name="room_uuid"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/server_graph"
+    app:startDestination="@id/searchServerFragment">
+
+    <activity
+        android:id="@+id/authenticationActivity"
+        android:name="com.rettiwer.pl.laris.ui.authentication.AuthenticationActivity"
+        android:label="activity_authentication"
+        tools:layout="@layout/activity_authentication" />
+    <fragment
+        android:id="@+id/searchServerFragment"
+        android:name="com.rettiwer.pl.laris.ui.server.SearchServerFragment"
+        android:label="fragment_search_server"
+        tools:layout="@layout/fragment_search_server" >
+        <action
+            android:id="@+id/action_searchServerFragment_to_authenticationActivity"
+            app:destination="@id/authenticationActivity" />
+    </fragment>
+</navigation>

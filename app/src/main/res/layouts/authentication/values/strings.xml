@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_connection_to_local_network">Brak połączenia z lokalną siecią WIFI serwera</string>
+    <string name="no_connection">Brak połączenia</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryTextColor">#FFFFFF</color>
+    <color name="secondaryTextColor">#676583</color>
+
+    <color name="buttonColor">#FA214D</color>
+
+    <color name="colorPrimary">#6D67D4</color>
+    <color name="colorPrimaryDark">#0F002F</color>
+    <color name="colorAccent">#FA214D</color>
+    
+    <color name="pin_normal">#676583</color>
+
+    <color name="divider">#2C2A52</color>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/room_nav"
+    app:startDestination="@id/roomDevicesFragmentMain">
+
+    <fragment
+        android:id="@+id/roomDevicesFragmentMain"
+        android:name="com.rettiwer.pl.laris.ui.room.RoomSensorsFragment"
+        android:label="fragment_room_devices"
+        tools:layout="@layout/fragment_room_devices" >
+        <action
+            android:id="@+id/action_roomDevicesFragment_to_newDeviceFirstStepFragment"
+            app:destination="@id/newDeviceFirstStepFragment" />
+        <action
+            android:id="@+id/action_roomDevicesFragment_to_deviceManagementFragment"
+            app:destination="@id/deviceManagementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDeviceFirstStepFragment"
+        android:name="com.rettiwer.pl.laris.ui.room.NewDeviceFirstStepFragment"
+        android:label="fragment_new_device_first_step"
+        tools:layout="@layout/fragment_new_device_first_step" >
+        <action
+            android:id="@+id/action_newDeviceFirstStepFragment_to_newDeviceSecondStepFragment"
+            app:destination="@id/newDeviceSecondStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDeviceSecondStepFragment"
+        android:name="com.rettiwer.pl.laris.ui.room.NewDeviceSecondStepFragment"
+        android:label="fragment_new_device_second_step"
+        tools:layout="@layout/fragment_new_device_second_step" >
+        <action
+            android:id="@+id/action_newDeviceSecondStepFragment_to_newDeviceThirdStepFragment"
+            app:destination="@id/newDeviceThirdStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDeviceThirdStepFragment"
+        android:name="com.rettiwer.pl.laris.ui.room.NewDeviceThirdStepFragment"
+        android:label="fragment_new_device_third_step"
+        tools:layout="@layout/fragment_new_device_third_step" >
+        <action
+            android:id="@+id/action_newDeviceThirdStepFragment_to_roomDevicesFragment"
+            app:destination="@id/roomDevicesFragmentMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceManagementFragment"
+        android:name="com.rettiwer.pl.laris.ui.room.DeviceManagementFragment"
+        android:label="fragment_device_management"
+        tools:layout="@layout/fragment_device_management" >
+        <action
+            android:id="@+id/action_deviceManagementFragment_to_roomDevicesFragment"
+            app:destination="@id/roomDevicesFragmentMain" />
+    </fragment>
+</navigation>

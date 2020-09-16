@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="connect_to_local_network">Połącz się z lokalną siecią WIFI serwera</string>
+
+    <string name="cannot_connect_to_tor_network">Nie można połaczyć się z TORem</string>
+    <string name="connecting_to_tor_network">Trwa łączenie z TORem</string>
+
+    <string name="permissions_not_granted">Nie przydzielono uprawnień</string>
+
+
+    <string name="request_timeout">Przekroczono czas oczekiwania</string>
+
+    <string name="network_api_error">Nie udało się połączyć z API</string>
+    <string name="title_activity_main">MainActivity</string>
+
+</resources>

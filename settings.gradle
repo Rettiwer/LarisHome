@@ -1,0 +1,2 @@
+include ':app'
+//project(":universal").projectDir = file("G:/Tor_Onion_Proxy_Library-master/universal")
